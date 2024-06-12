@@ -7,4 +7,19 @@ Will check the following:
 - asking customer to cancel an order
 - sharing private information that could lead to dangerous out of app transaction
 
+```
+src/
+├── data/
+│   ├── badwords.txt
+│   ├── cancel.txt
+├── Main.java
+├── BadWords.java
+├── Cancel.java
+├── Translate.java
+├── PrivateInfo.java
+├── BFAlgorithm.java
+├── KMPAlgorithm.java
+└── BMAlgorithm.java
+
+```
 Use the `tester.py` to try different cases, run `main.py` to check your own text input.

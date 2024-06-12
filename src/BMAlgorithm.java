@@ -4,7 +4,6 @@
 // will return array of lasttoccur
 public class BMAlgorithm {
     public static int[] lastoccur(String pattern){
-        System.out.println("Let's build the lasst occurence list!\n");
         int lastoccur[] = new int[128];
         for (int i = 0; i<128; i++){
             lastoccur[i] = -1;  //every char doesnt exist at first
@@ -26,7 +25,7 @@ public class BMAlgorithm {
         while (idx_i<=n-1) {
             if(pattern.charAt(idx_j)==text.charAt(idx_i)){
                 if(idx_j==0){
-                    System.out.println("Found it!");
+                    // System.out.println("Found it!");
                     return idx_i;
                 }
                 else{
@@ -40,7 +39,6 @@ public class BMAlgorithm {
                 idx_j = m-1;
             }
         }
-        System.out.println("We can't find the pattern");
         return -1;
     }
 }

@@ -2,6 +2,7 @@ import java.util.regex.*;
 
 public class PrivateInfo {
     public static void filterPrivateInfo(String text) {
+        System.out.println("CHECKING PRIVATE INFO...");
         boolean containsPhoneNumber = containsPhoneNumber(text);
         boolean containsEmailAddress = containsEmailAddress(text);
         boolean containsSocialMedia = containsSocialMedia(text);
@@ -31,7 +32,8 @@ public class PrivateInfo {
 
     // Regex pattern for matching phone numbers
     public static boolean containsPhoneNumber(String text) {
-        String phonePattern = "(\\+62\\s?\\d{1,3}([-\\s]\\d{3,}([-\\s]\\d{4,})?)?)|(\\(\\d+\\)\\s?\\d+)|\\d{3}(\\s\\d+)+|\\d+([-\\s]\\d+)+|\\d{8,}";
+        String phonePattern = 
+"(\\+62\\s?\\d{1,3}([-\\s]\\d{3,}([-\\s]\\d{4,})?)?)|(\\(\\d+\\)\\s?\\d+)|\\d{3}(\\s\\d+)+|\\d+([-\\s]\\d+)+|\\d{8,12}";
 
         Pattern compiledPattern = Pattern.compile(phonePattern);
         Matcher matcher = compiledPattern.matcher(text);
@@ -58,7 +60,7 @@ public class PrivateInfo {
 
     // Regex pattern for matching links
     public static boolean containsOutsideLink(String text){
-        String linkPattern = "\\b(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]\\b";
+        String linkPattern = "\\b(https?|ftp)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]\\b";
 
         Pattern compiledPattern = Pattern.compile(linkPattern, Pattern.CASE_INSENSITIVE);
         Matcher matcher = compiledPattern.matcher(text);

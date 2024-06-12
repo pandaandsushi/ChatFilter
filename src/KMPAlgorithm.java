@@ -6,7 +6,6 @@ public class KMPAlgorithm {
     // function to build LPS / border func table in KMP  
     // will return an array of border func
     public static int[] lpsValue(String pattern) {
-        System.out.println("Let's build the border function!\n");
         int[] borderfunc = new int[pattern.length()];
         int prefixbestlength = 0;
         int idx = 1; // the lps array index starts from 1 since borderfunc[0] is always 0
@@ -55,7 +54,7 @@ public class KMPAlgorithm {
                 }
             }
         }
-        System.out.println("We can't find the pattern");
-        return -1;
+        // System.out.println("We can't find the pattern");
+        return -1; 
     }
 }
