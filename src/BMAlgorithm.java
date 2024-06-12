@@ -25,7 +25,6 @@ public class BMAlgorithm {
         while (idx_i<=n-1) {
             if(pattern.charAt(idx_j)==text.charAt(idx_i)){
                 if(idx_j==0){
-                    // System.out.println("Found it!");
                     return idx_i;
                 }
                 else{

@@ -41,7 +41,6 @@ public class KMPAlgorithm {
         while (idx_i < n) {
             if (pattern.charAt(idx_j) == text.charAt(idx_i)) {
                 if (idx_j == m - 1) {
-                    System.out.println("Found it!");
                     return idx_i - m + 1;
                 }
                 idx_i++;
@@ -54,7 +53,6 @@ public class KMPAlgorithm {
                 }
             }
         }
-        // System.out.println("We can't find the pattern");
         return -1; 
     }
 }

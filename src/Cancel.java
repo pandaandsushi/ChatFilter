@@ -11,7 +11,7 @@ public class Cancel {
             // Use KMP
             for (String word : dictionary) {
                 if (KMPAlgorithm.KMPAlgo(word, text)!=-1) {
-                    System.out.println(">>> This word is not allowed: " + word);
+                    System.out.println("This word is not allowed: " + word);
                     break;
                 }
             }
@@ -20,7 +20,7 @@ public class Cancel {
             // Use BM
             for (String word : dictionary) {
                 if (BMAlgorithm.BMAlgo(word, text)!=-1) {
-                    System.out.println(">>> This word is not allowed: " + word);
+                    System.out.println("This word is not allowed: " + word);
                     break;
                 }
             }
@@ -29,7 +29,7 @@ public class Cancel {
             // Use BF
             for (String word : dictionary) {
                 if (BFAlgorithm.BFAlgo(word, text)!=-1) {
-                    System.out.println(">>> This word is not allowed: " + word);
+                    System.out.println("This word is not allowed: " + word);
                     break;
                 }
             }

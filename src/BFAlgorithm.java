@@ -12,7 +12,6 @@ public class BFAlgorithm {
                 countsame++;
             }
             if(countsame==m){
-                System.out.println("Found it!");
                 idxfound = i;
                 break;
             }
