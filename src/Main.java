@@ -35,11 +35,25 @@ public class Main {
                     System.out.println("Wrong input.");
                 }
             }
+            long startTime, endTime, elapsedTime;
+            startTime = System.currentTimeMillis();
             try {
                 chatfilter(message, algo);
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            endTime = System.currentTimeMillis();
+            elapsedTime = endTime - startTime;
+            if(algo == 0){
+                System.out.println("KMP Execution Time: " + elapsedTime + " ms");
+            }
+            else if (algo == 1){
+                System.out.println("BM Execution Time: " + elapsedTime + " ms");
+            }
+            else{
+                System.out.println("BF Execution Time: " + elapsedTime + " ms");
+            }
+            System.out.println("-----------------------------------------------------");
 
             while (true) {
                 System.out.println("Do you want to try again? (Y/N)");
@@ -61,6 +75,7 @@ public class Main {
 
     public static void chatfilter(String message, int algo) throws IOException {
         String altermessage = Translate.translate(message);
+        
         System.out.println("-----------------------------------------------------");
         // Check for bad words
         BadWords.filterbadwords(altermessage, algo);

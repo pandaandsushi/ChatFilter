@@ -13,26 +13,19 @@ public class Translate {
             String replacement;
             switch (matcher.group()) {
                 case "1":
-                    replacement = "i";
-                    break;
+                    replacement = "i"; break;
                 case "4":
-                    replacement = "a";
-                    break;
+                    replacement = "a"; break;
                 case "6":
-                    replacement = "g";
-                    break;
+                    replacement = "g"; break;
                 case "5":
-                    replacement = "s";
-                    break;
+                    replacement = "s"; break;
                 case "3":
-                    replacement = "e";
-                    break;
+                    replacement = "e"; break;
                 case "0":
-                    replacement = "o";
-                    break;
+                    replacement = "o"; break;
                 default:
-                    replacement = matcher.group();
-                    break;
+                    replacement = matcher.group(); break;
             }
             matcher.appendReplacement(result, replacement);
         }
