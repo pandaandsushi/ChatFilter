@@ -1,11 +1,11 @@
 # ChatFilter Simulation
-Chat Filter Simulation on E-Commerce Shopee Using Regex and Pattern Matching Algorithm
-Made By Thea Josephine 13522012
+## Made By Thea Josephine 13522012
+Chat Filter Simulation on Shopee E-Commerce Using Regex and Pattern Matching Algorithm
 
 Will check the following:
 - vulgar words
 - asking customer to cancel an order
-- sharing private information that could lead to dangerous out of app transaction
+- sharing private information that could lead to dangerous out of app transaction (email, social media, phone number, links)
 
 ```
 src/
@@ -22,4 +22,11 @@ src/
 └── BMAlgorithm.java
 
 ```
-Use the `tester.py` to try different cases, run `main.py` to check your own text input.
+### To Run
+- Open VSCode, open terminal on src directory
+- Compile using `javac Main.java` then `java Main`
+
+### To Use
+- Input the text you want to check
+- Input the type of algorithm (KMP/BM/BF)
+- Results between checks are displayed separately on terminal
